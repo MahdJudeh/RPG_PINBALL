@@ -14,10 +14,10 @@ public class PaddleControl : MonoBehaviour {
 		motorB = gameObject.GetComponent<HingeJoint> ().motor;
 		motorReturnA = gameObject.GetComponent<HingeJoint> ().motor;
 		motorReturnB = gameObject.GetComponent<HingeJoint> ().motor;
-		motorA.targetVelocity = -2000;
-		motorB.targetVelocity = 2000;
-		motorReturnB.targetVelocity = -2000;
-		motorReturnA.targetVelocity = 2000;
+		motorA.targetVelocity = -3000;
+		motorB.targetVelocity = 3000;
+		motorReturnB.targetVelocity = -3000;
+		motorReturnA.targetVelocity = 3000;
 	}
 	
 	// Update is called once per frame

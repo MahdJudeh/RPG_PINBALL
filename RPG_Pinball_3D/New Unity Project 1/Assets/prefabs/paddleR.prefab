@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409038178138786}
   m_LocalRotation: {x: -0, y: -0.9848078, z: 0, w: -0.17364807}
-  m_LocalPosition: {x: 41, y: 0.54, z: 7}
+  m_LocalPosition: {x: 41, y: 0.54, z: 8}
   m_LocalScale: {x: 1.0000004, y: 1, z: 1}
   m_Children:
   - {fileID: 4898916745553088}
@@ -137,7 +137,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 1, z: 2.2}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.5399964, y: -39.24756, z: 12.067324}
+  m_ConnectedAnchor: {x: 1.5399964, y: -39.24756, z: 10.067324}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -146,7 +146,7 @@ HingeJoint:
   m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
-    force: 1500
+    force: 3000
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
