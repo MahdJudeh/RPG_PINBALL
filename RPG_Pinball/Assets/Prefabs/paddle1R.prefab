@@ -20,11 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4542563728485568}
   - component: {fileID: 212565650633600264}
-  - component: {fileID: 61444123780536886}
-  - component: {fileID: 58573605617406050}
   - component: {fileID: 50900032840087218}
   - component: {fileID: 233769566518865882}
   - component: {fileID: 114178389081604162}
+  - component: {fileID: 60439297362648598}
   m_Layer: 0
   m_Name: paddle1R
   m_TagString: PaddleR
@@ -39,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1219796138675618}
   m_LocalRotation: {x: 0, y: 0, z: 0.30070576, w: 0.953717}
-  m_LocalPosition: {x: 1, y: -2.0527163, z: 0}
-  m_LocalScale: {x: -0.25, y: 0.25, z: 1}
+  m_LocalPosition: {x: 5, y: -23, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -56,17 +55,17 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
---- !u!58 &58573605617406050
-CircleCollider2D:
+--- !u!60 &60439297362648598
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,23 +75,28 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -1.85, y: 0.23}
-  serializedVersion: 2
-  m_Radius: 0.81
---- !u!61 &61444123780536886
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1219796138675618}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.5, y: 0.565}
-  serializedVersion: 2
-  m_Size: {x: 4.8, y: 0.93}
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -1.03, y: 0.07}
+      - {x: 2.9099998, y: 0.07}
+      - {x: 2.9299998, y: 0.089999996}
+      - {x: 2.9299998, y: 1.04}
+      - {x: 2.9099998, y: 1.06}
+      - {x: -1.9499999, y: 1.06}
+      - {x: -2.07, y: 1.04}
+      - {x: -2.19, y: 1.01}
+      - {x: -2.37, y: 0.91999996}
+      - {x: -2.6, y: 0.65999997}
+      - {x: -2.6799998, y: 0.48999998}
+      - {x: -2.6799998, y: -0.01}
+      - {x: -2.53, y: -0.29}
+      - {x: -2.28, y: -0.52}
+      - {x: -2.07, y: -0.59999996}
+      - {x: -1.68, y: -0.59999996}
+      - {x: -1.42, y: -0.52}
+      - {x: -1.22, y: -0.34}
+      - {x: -1.0699999, y: -0.11}
 --- !u!114 &114178389081604162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,17 +151,17 @@ HingeJoint2D:
   m_GameObject: {fileID: 1219796138675618}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -1.82, y: 0.25}
-  m_ConnectedAnchor: {x: 1.3368657, y: -1.7405419}
+  m_ConnectedAnchor: {x: 6.3474627, y: -21.751303}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MaximumMotorForce: 100000
   m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: 0

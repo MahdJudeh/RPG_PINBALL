@@ -14,21 +14,21 @@ public class PaddleControl : MonoBehaviour {
 		motorB = gameObject.GetComponent<HingeJoint2D> ().motor;
 		motorReturnA = gameObject.GetComponent<HingeJoint2D> ().motor;
 		motorReturnB = gameObject.GetComponent<HingeJoint2D> ().motor;
-		motorA.motorSpeed = -1500;
-		motorB.motorSpeed = 1500;
-		motorReturnB.motorSpeed = -1000;
-		motorReturnA.motorSpeed = 1000;
+		motorA.motorSpeed = -10000;
+		motorB.motorSpeed = 10000;
+		motorReturnB.motorSpeed = -10000;
+		motorReturnA.motorSpeed = 10000;
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () 
+	void Update () 
 	{
 		if (gameObject.tag == "PaddleL") {
 			
 			if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
 				gameObject.GetComponent<HingeJoint2D> ().motor = motorA;
 			}
-			else{
+			else {
 				gameObject.GetComponent<HingeJoint2D> ().motor = motorReturnA;
 			}
 		}
@@ -36,7 +36,7 @@ public class PaddleControl : MonoBehaviour {
 			if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
 				gameObject.GetComponent<HingeJoint2D> ().motor = motorB;
 			}
-			else{
+			else {
 				gameObject.GetComponent<HingeJoint2D> ().motor = motorReturnB;
 			}
 		}
