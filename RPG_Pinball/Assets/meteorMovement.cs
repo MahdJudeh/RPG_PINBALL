@@ -14,18 +14,19 @@ public class meteorMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		distance = Vector3.Distance (gameObject.GetComponent<Transform> ().position, -initialPosition);
+		distance = Vector3.Distance (gameObject.GetComponent<Transform> ().position, initialPosition);
+		Debug.Log (distance);
 		if(positionLock == false){
 			gameObject.GetComponent<Transform> ().position += new Vector3 (.05f, .05f, 0f);
-			if(System.Math.Round(distance, 2) == 8){
-				gameObject.GetComponent<Transform> ().localScale = new Vector3 (-1, 1, 1);
+			if(System.Math.Round(distance, 1) == 8){
+				gameObject.GetComponent<Transform> ().localScale = new Vector3 (-2, 2, 1);
 				positionLock = true;
 			}
 		}
 		else {
 			gameObject.GetComponent<Transform> ().position -= new Vector3 (.05f, .05f, 0f);
-			if(System.Math.Round(distance, 1) == 14){
-				gameObject.GetComponent<Transform> ().localScale = new Vector3 (1, 1, 1);
+			if(System.Math.Round(distance, 1) == 0){
+				gameObject.GetComponent<Transform> ().localScale = new Vector3 (2, 2, 1);
 				positionLock = false;
 			}
 		}

@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
 	public Text sText;
 	public Text lText;
 	public GameObject ball;
-	int lives;
+	public static int lives;
 	public static int score;
 	Vector3 initialLocationOfBall;
 	// Use this for initialization
@@ -22,7 +23,10 @@ public class GameController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-
+	void Update()
+	{
+		lText.text = "LIVES: " + lives;
+	}
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player") 
 		{
@@ -36,7 +40,7 @@ public class GameController : MonoBehaviour {
 				Debug.Log ("did Work");
 			} else 
 			{
-				
+				SceneManager.LoadScene (1);
 			}
 	
 		}
