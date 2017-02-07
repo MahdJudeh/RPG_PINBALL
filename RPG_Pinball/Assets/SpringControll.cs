@@ -12,15 +12,13 @@ public class SpringControll : MonoBehaviour {
 	private bool lockS;
 	private bool contact;
 	public GameObject ball;
-	private Rigidbody2D rb;
 
 	// Use this for initialization
 	void Start () {
 		timeLock = gameObject.GetComponent<Transform> ().localScale - new Vector3 (0f, .5f, 0f);
 		initialForce = new Vector3 (0f, 0f, 0f);
 		lockS = false;
-		contact = false;
-		rb = ball.GetComponent<Rigidbody2D> ();
+		contact = false; 
 	}
 	
 	// Update is called once per frame
@@ -47,18 +45,30 @@ public class SpringControll : MonoBehaviour {
 				
 				lockS = false;
 
-				if (contact == true) {
-					rb.AddForce (initialForce);
-					initialForce = new Vector3 (0f, 0f, 0f);
-				}
 			}
 		}
 
 	}
+	void OnTriggerEnter2D(Collider2D other){
+		Debug.Log (contact);
+		if (other.tag == "Player") {
+			if(Input.GetKeyUp(KeyCode.Space))
+			{
+			contact = true;
+			other.GetComponent<Rigidbody2D>().AddForce (initialForce);
+			initialForce = new Vector3 (0f, 0f, 0f);
+			}
+		}
+	}
 	void OnTriggerStay2D(Collider2D other){
 		Debug.Log (contact);
 		if (other.tag == "Player") {
-			contact = true;
+			if(Input.GetKeyUp(KeyCode.Space))
+			{
+				contact = true;
+				other.GetComponent<Rigidbody2D>().AddForce (initialForce);
+				initialForce = new Vector3 (0f, 0f, 0f);
+			}
 		}
 	}
 	void OnTriggerExit2D(Collider2D other){

@@ -6,6 +6,10 @@ TagManager:
   tags:
   - PaddleL
   - PaddleR
+  - Moon
+  - BlueStar
+  - YellowStar
+  - DeathField
   layers:
   - Default
   - TransparentFX

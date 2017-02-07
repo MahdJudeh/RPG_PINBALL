@@ -17,7 +17,6 @@ public class meteorMovement : MonoBehaviour {
 		distance = Vector3.Distance (gameObject.GetComponent<Transform> ().position, -initialPosition);
 		if(positionLock == false){
 			gameObject.GetComponent<Transform> ().position += new Vector3 (.05f, .05f, 0f);
-			Debug.Log (distance);
 			if(System.Math.Round(distance, 2) == 8){
 				gameObject.GetComponent<Transform> ().localScale = new Vector3 (-1, 1, 1);
 				positionLock = true;
